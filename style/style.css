@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d1a2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 340px;
+    height: 580px;
+    border-radius: 20px;
+    background-color: #15273f;
+    box-shadow: 0 40px 20px #0c1729;
+    padding: 25px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.card .img-box {
+    position: relative;
+    cursor: pointer;
+}
+.card .img-box::before {
+    content: url('../images/icon-view.svg');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 10;
+}
+.card .img-box:hover::before {
+    opacity: 1;
+}
+
+.card .img-box:hover img {
+    filter: hue-rotate(100deg);
+}
+
+.card .card-info {
+    margin-top: 20px;
+}
+
+.card a.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.card a.title:hover {
+    color: #00fff7;
+}
+
+.card .text {
+    padding: 14px 0;
+    font-size: 18px;
+    color: #637d9c;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.card .info {
+    padding: 10px 0;
+}
+
+.card .info span {
+    font-size: 18px;
+    display: inline-block;
+    line-height: 100%;
+}
+
+.info .left {
+    float: left;
+    color: #00fff7;
+    font-weight: 600;
+}
+.info .right {
+    float: right;
+    color: #637d9c;
+}
+
+.info img {
+    width: auto;
+    height: 18px;
+    vertical-align: top;
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 10px 0;
+    border-top: 1px solid #2b3d55;
+}
+
+.footer img {
+    width: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.footer .author {
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #637d9c;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.author a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.author a:hover {
+    color: #00fff7;
+}
